@@ -220,15 +220,15 @@
         <div class="right-side-img"></div>
     </div>
 
-    <section class="cmp-unified-about">
+    <!-- <section class="cmp-unified-about">
 
-        <!-- Frame Left -->
+       
         <div class="side-img left-side-img"></div>
 
-        <!-- Combined Center Content -->
+        
         <div class="content-wrap">
 
-            <!-- Column 1: Project Description -->
+          
             <div class="about-text-col">
                 <div class="cmp-title-row">
                     <span>❖</span>
@@ -245,7 +245,7 @@
                 </a>
             </div>
 
-            <!-- Column 2: Heritage Explorer -->
+           
             <div class="about-grid-col">
                 <div class="cmp-title-row">
                     <span>❖</span>
@@ -280,7 +280,7 @@
         </div>
 
 
-    </section>
+    </section> -->
 
 
     <!-- SECTION: Categories -->
@@ -333,6 +333,8 @@
     <div id="categoryModal" class="cat-modal-overlay">
         <div class="cat-modal-box">
             <div class="cat-modal-header">
+                <button class="cat-modal-close" id="closeModalBtn">&times;</button>
+
                 <h3 id="modalHeadingAs" class="as-text"></h3>
                 <div class="card-divider"></div>
                 <h4 id="modalHeadingEn" class="en-text"></h4>
@@ -510,5 +512,35 @@
             }
         });
     });
+</script>
+<script>
+    const modal = document.getElementById('categoryModal');
+const closeBtn = document.getElementById('closeModalBtn');
+
+// CLOSE
+const closeModal = () => {
+    modal.classList.remove('active');
+};
+
+// OPEN (keep yours but ensure this)
+cards.forEach(card => {
+    card.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.classList.add('active');
+    });
+});
+
+// close button
+closeBtn.addEventListener('click', closeModal);
+
+// click outside
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+});
+
+// ESC key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+});
 </script>
 </html>

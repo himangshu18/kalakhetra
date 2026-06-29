@@ -1737,3 +1737,34 @@ ABOUT SECTION
     font-size: 18px; 
     line-height: 1.7;
 }
+
+
+.cat-modal-header {
+    position: relative;
+    padding-right: 40px;
+}
+
+.cat-modal-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: transparent;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: #333;
+    transition: 0.2s;
+}
+
+.cat-modal-close:hover {
+    color: red;
+    transform: scale(1.1);
+}
+
+.cat-modal-overlay {
+    display: none;
+}
+
+.cat-modal-overlay.active {
+    display: flex;
+}
