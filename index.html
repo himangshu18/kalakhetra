@@ -55,12 +55,12 @@
     <!-- SECTION 3: Collapsible Navigation Menu -->
     <nav class="navbar-menu" id="navbarMenu">
         <div class="navbar-menu-inner">
-            <!-- Close Button -->
+        
             <div class="menu-close"><i class="fas fa-times"></i></div>
 
-            <!-- Menu Items -->
+         
             <ul class="menu-list">
-                <!-- Menu 1: Xobixesh with 5 submenus -->
+            
                 <li class="menu-item">
                     <a href="#" class="menu-link menu-parent">
                         <span>সবিশেষ</span>
@@ -75,14 +75,14 @@
                     </ul>
                 </li>
 
-                <!-- Menu 2: Rajya Porisoi -->
+        
                 <li class="menu-item">
                     <a href="#" class="menu-link">
                         <span>ৰাজ্য পৰিচয়</span>
                     </a>
                 </li>
 
-                <!-- Menu 3: Xomol with 4 submenus -->
+               
                 <li class="menu-item">
                     <a href="#" class="menu-link menu-parent">
                         <span>সমল</span>
@@ -96,7 +96,7 @@
                     </ul>
                 </li>
 
-                <!-- Menu 4: Karmoklaap -->
+              
                 <li class="menu-item">
                     <a href="#" class="menu-link">
                         <span>কৰ্মক্লাপ</span>
@@ -209,7 +209,10 @@
                 প্ৰচাৰৰ বিস্তৃত পদক্ষেপ। এই প্ৰকল্পৰ জৰিয়তে ৰাজ্যৰ বিভিন্ন জনগোষ্ঠীৰ লোকসংস্কৃতি, পৰম্পৰা, শিল্প আৰু
                 সামাজিক ৰীতি-নীতি সম্পৰ্কীয় তথ্য সংগ্ৰহ কৰি এক বিস্তৃত ডিজিটেল তথ্যভঁৰাল গঢ়ি তোলা হৈছে।
             </p>
-            <a href="#" class="btn-read-more">
+            <!-- <a href="#" class="btn-read-more">
+                Read More <i class="fas fa-arrow-circle-right"></i>
+            </a> -->
+            <a href="javascript:void(0);" class="btn-read-more" id="aboutModalBtn">
                 Read More <i class="fas fa-arrow-circle-right"></i>
             </a>
         </div>
@@ -380,7 +383,89 @@
             </div>
         </div>
     </section> -->
+    <!-- =====================================
+     ABOUT PROJECT MODAL
+====================================== -->
 
+<div id="aboutModal" class="cmp-modal">
+
+    <div class="cmp-modal-content">
+
+        <div class="cmp-modal-header">
+
+            <h2>
+                <i class="fas fa-landmark"></i>
+                About Cultural Mapping Project
+            </h2>
+
+            <span class="cmp-close">&times;</span>
+
+        </div>
+
+        <div class="cmp-modal-body">
+
+            <div class="modal-title">
+
+                <h3>অসম সাংস্কৃতিক মানচিত্ৰ প্ৰকল্প</h3>
+
+                <p>
+                    Cultural Mapping Project, Assam
+                </p>
+
+            </div>
+
+            <p>
+
+                'সাংস্কৃতিক মানচিত্ৰণ প্ৰকল্প' (CMP) হৈছে অসমৰ
+                বৈচিত্ৰময় সাংস্কৃতিক ঐতিহ্যৰ নথিভুক্তকৰণ,
+                সংৰক্ষণ আৰু প্ৰচাৰৰ এক বিস্তৃত পদক্ষেপ।
+
+            </p>
+
+            <p>
+
+                এই প্ৰকল্পৰ জৰিয়তে অসমৰ বিভিন্ন জনগোষ্ঠীৰ
+                লোকসংস্কৃতি, পৰম্পৰা, ভাষা, শিল্প, স্থাপত্য,
+                লোকসাহিত্য, উৎসৱ, নৃত্য, সংগীত, খাদ্য সংস্কৃতি,
+                পৰম্পৰাগত জীৱনধাৰা, সামাজিক ৰীতি-নীতি,
+                ঐতিহাসিক স্থান, ধৰ্মীয় পৰম্পৰা আৰু অমূল্য
+                সাংস্কৃতিক সম্পদসমূহ ডিজিটেল ৰূপত সংৰক্ষণ কৰা
+                হৈছে।
+
+            </p>
+
+            <p>
+
+                এই তথ্যসমূহে গৱেষক, ছাত্ৰ-ছাত্ৰী, পৰ্যটক,
+                সংস্কৃতি অনুৰাগী আৰু সাধাৰণ জনসাধাৰণক অসমৰ
+                সমৃদ্ধ সাংস্কৃতিক ঐতিহ্যৰ বিষয়ে অধিক জানিবলৈ
+                সহায় কৰিব।
+
+            </p>
+
+            <hr>
+
+            <h4>Objectives</h4>
+
+            <ul>
+
+                <li>Digital preservation of Assam's cultural heritage.</li>
+
+                <li>Documentation of indigenous traditions.</li>
+
+                <li>Promotion of cultural tourism.</li>
+
+                <li>Support for research and education.</li>
+
+                <li>Creation of a comprehensive digital archive.</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
     <!-- SECTION 13: Footer -->
     <footer>
         <div class="footer-grid">
@@ -453,5 +538,39 @@
 <script src="assets/js/menu.js"></script>
 <script src="assets/js/slider.js"></script>
 <script src="assets/js/modal.js"></script>
+
+
+<script>
+const aboutModal=document.getElementById("aboutModal");
+
+document.getElementById("aboutModalBtn").onclick=function(){
+
+    aboutModal.style.display="block";
+
+    document.body.style.overflow="hidden";
+
+}
+
+document.querySelector(".cmp-close").onclick=function(){
+
+    aboutModal.style.display="none";
+
+    document.body.style.overflow="auto";
+
+}
+
+window.onclick=function(e){
+
+    if(e.target==aboutModal){
+
+        aboutModal.style.display="none";
+
+        document.body.style.overflow="auto";
+
+    }
+
+}
+</script>
+
 
 </html>
