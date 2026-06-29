@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="as">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>অসম সাংস্কৃতিক মানচিত্ৰ প্ৰকল্প | Cultural Mapping Project, Assam</title>
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/homepage-styles.css">
+    <link rel="stylesheet" href="assets/css/griha_page.css">
+
+    <!-- Google Fonts: Poppins & Hind Siliguri for Assamese -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Hind+Siliguri:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- SECTION 1: Accessibility -->
+    <div class="top-acc-bar">
+        <div class="acc-left">
+            <a href="#">Skip to main content</a>
+            <span>|</span>
+            <a href="#">Screen Reader Access</a>
+            <div class="font-tools">
+                <span>A-</span> <span class="active">A</span> <span>A+</span>
+            </div>
+            <span><i class="fas fa-adjust"></i></span>
+        </div>
+        <div class="acc-right">
+            <span>An Initiative of Ministry of Culture, Govt. of India</span>
+            <span>Sitemap | Help | Eng <i class="fas fa-chevron-down"></i></span>
+        </div>
+    </div>
+
+    <!-- SECTION 2: Header -->
+    <header>
+        <div class="header-left">
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            <a href="index.html">
+                <div class="logo-circle">
+                    <img src="assets/logo_cm.png" alt="Logo">
+                </div>
+            </a>
+            <div class="title-area">
+                <h1>অসম সাংস্কৃতিক মানচিত্ৰ প্ৰকল্প</h1>
+                <p>Cultural Mapping Project, Assam</p>
+            </div>
+        </div>
+        <div class="header-right">
+            <i class="fas fa-search" style="font-size: 20px; cursor: pointer;"></i>
+            <div class="ic-badge">IC</div>
+        </div>
+    </header>
+    <!-- SECTION 3: Collapsible Navigation Menu -->
+    <nav class="navbar-menu" id="navbarMenu">
+        <div class="navbar-menu-inner">
+            <!-- Close Button -->
+            <div class="menu-close"><i class="fas fa-times"></i></div>
+
+            <!-- Menu Items -->
+            <ul class="menu-list">
+                <!-- Menu 1: Xobixesh with 5 submenus -->
+                <li class="menu-item">
+                    <a href="#" class="menu-link menu-parent">
+                        <span>সবিশেষ</span>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#">বিষয়বস্তু ১</a></li>
+                        <li><a href="#">বিষয়বস্তু ২</a></li>
+                        <li><a href="#">বিষয়বস্তু ৩</a></li>
+                        <li><a href="#">বিষয়বস্তু ৪</a></li>
+                        <li><a href="#">বিষয়বস্তু ৫</a></li>
+                    </ul>
+                </li>
+
+                <!-- Menu 2: Rajya Porisoi -->
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        <span>ৰাজ্য পৰিচয়</span>
+                    </a>
+                </li>
+
+                <!-- Menu 3: Xomol with 4 submenus -->
+                <li class="menu-item">
+                    <a href="#" class="menu-link menu-parent">
+                        <span>সমল</span>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#">সম্পদ ১</a></li>
+                        <li><a href="#">সম্পদ ২</a></li>
+                        <li><a href="#">সম্পদ ৩</a></li>
+                        <li><a href="#">সম্পদ ৪</a></li>
+                    </ul>
+                </li>
+
+                <!-- Menu 4: Karmoklaap -->
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        <span>কৰ্মক্লাপ</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="page-title">
+            <h1>🏠 পৰম্পৰাগত গৃহ</h1>
+            <p>Traditional Houses</p>
+        </div>
+
+        <div class="top-tabs">
+
+            <button class="tab-btn active" onclick="openTopTab(event,'hills')">
+                <i class="fas fa-mountain"></i>
+                Hills
+            </button>
+
+            <button class="tab-btn" onclick="openTopTab(event,'plains')">
+                <i class="fas fa-seedling"></i>
+                Plains
+            </button>
+
+        </div>
+
+        <div id="hills" class="tab-content active">
+
+            <div class="house-card">
+
+                <div class="house-header">
+
+                    <div class="house-image">
+                        <img src="assets/dekachang.png" alt="">
+                    </div>
+
+                    <div class="house-info">
+
+                        <span class="house-badge">
+                            <i class="fas fa-home"></i> Hills
+                        </span>
+
+                        <h2>🏠 Deka Chang</h2>
+
+                        <p>
+                            Traditional hill dwelling built using bamboo, timber and thatch.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="sub-tabs">
+
+                    <button class="sub-btn active" onclick="openSub(event,'deka-text','deka')">
+
+                        <i class="fas fa-book-open"></i>
+                        Description
+
+                    </button>
+
+                    <button class="sub-btn" onclick="openSub(event,'deka-img','deka')">
+
+                        <i class="fas fa-images"></i>
+                        Gallery
+
+                    </button>
+
+                    <button class="sub-btn" onclick="openSub(event,'deka-video','deka')">
+
+                        <i class="fas fa-circle-play"></i>
+                        Videos
+
+                    </button>
+
+                </div>
+
+                <div id="deka-text" class="sub-content active deka">
+
+                    <h3 class="word-heading">
+
+                        Deka Chang
+
+                        <button class="audio-btn" onclick="playAudio('dekaAudio')">
+
+                            <i class="fas fa-volume-high"></i>
+
+                        </button>
+
+                    </h3>
+
+                    <audio id="dekaAudio">
+
+                        <source src="assets/audio/deka_chang.mp3" type="audio/mpeg">
+
+                    </audio>
+
+                    <p>
+                        Deka Chang is the traditional hill dwelling of the Tiwa community...
+                    </p>
+
+                </div>
+
+                <div id="deka-img" class="sub-content deka">
+
+                    <div class="gallery">
+
+                        <img src="assets/dekachang.png">
+
+                        <img src="assets/dekachang.png">
+
+                        <img src="assets/dekachang.png">
+
+                    </div>
+
+                </div>
+
+                <div id="deka-video" class="sub-content deka">
+
+                    <div class="video-gallery">
+
+                        <div class="video-item">
+
+                            <iframe src="https://www.youtube.com/embed/cHBqwj0Ed_I" title="Deka Chang Traditional House"
+                                loading="lazy"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+
+                            <div class="video-info">
+
+                                <h4>Deka Chang - Traditional House</h4>
+
+                                <p>
+                                    Documentary showcasing the traditional Deka Chang house
+                                    of the Tiwa community.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="house-card">
+
+                <div class="house-header">
+
+                    <div class="house-image">
+                        <img src="assets/nobaru.png" alt="">
+                    </div>
+
+                    <div class="house-info">
+
+                        <span class="house-badge">
+
+                            <i class="fas fa-mountain"></i>
+
+                            Hills
+
+                        </span>
+
+                        <h2>🏠 Nu-Baro</h2>
+
+                        <p>
+
+                            Traditional hill dwelling built using bamboo.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="sub-tabs">
+
+                    <button class="sub-btn active" onclick="openSub(event,'nu-text','nu')">
+
+                        <i class="fas fa-book-open"></i>
+
+                        Description
+
+                    </button>
+
+                    <button class="sub-btn" onclick="openSub(event,'nu-img','nu')">
+
+                        <i class="fas fa-images"></i>
+
+                        Gallery
+
+                    </button>
+
+                    <button class="sub-btn" onclick="openSub(event,'nu-video','nu')">
+
+                        <i class="fas fa-circle-play"></i>
+
+                        Videos
+
+                    </button>
+
+                </div>
+
+                <div id="nu-text" class="sub-content active nu">
+
+                    <h3 class="word-heading">
+
+                        Nu-Baro
+
+                        <button class="audio-btn" onclick="playAudio('nuAudio')">
+
+                            <i class="fas fa-volume-high"></i>
+
+                        </button>
+
+                    </h3>
+
+                    <audio id="nuAudio">
+                        <source src="assets/audio/nu_baro.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+
+                    <p>
+                        Nu-Baro is one of the traditional houses of the Tiwa community. It is
+                        constructed mainly with bamboo, timber and thatch, reflecting the
+                        indigenous architectural knowledge and cultural heritage of the hill
+                        Tiwas.
+                    </p>
+
+                    <p>
+                        The design of the Nu-Baro provides protection from the weather while
+                        maintaining proper ventilation. The house also serves as an important
+                        social and cultural space for family gatherings and traditional
+                        ceremonies.
+                    </p>
+
+                </div>
+
+                <div id="nu-img" class="sub-content nu">
+
+                    <div class="gallery">
+
+                        <img src="assets/nobaru.png">
+
+                        <img src="assets/nobaru.png">
+
+                        <img src="assets/nobaru.png">
+
+                    </div>
+
+                </div>
+
+                <div id="nu-video" class="sub-content nu">
+
+                    <div class="video-gallery">
+
+                        <div class="video-item">
+
+                            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Nu-Baro Traditional House"
+                                loading="lazy"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+
+                            <div class="video-info">
+
+                                <h4>Nu-Baro - Traditional House</h4>
+
+                                <p>
+                                    Documentary showcasing the traditional Nu-Baro house of the
+                                    Tiwa community, highlighting its unique architectural style,
+                                    cultural significance, and traditional construction methods.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="plains" class="tab-content">
+
+            <div class="coming-soon-card">
+
+                <div class="coming-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+
+                <h2>Plains Traditional Houses</h2>
+
+                <div class="coming-badge">
+                    <i class="fas fa-clock"></i>
+                    Page Coming Soon
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        function toggleDrawer(card) {
+            const wrapper = card.parentElement;
+            const isActive = wrapper.classList.contains('active');
+            document.querySelectorAll('.as-cat-wrapper').forEach(item => item.classList.remove('active'));
+            if (!isActive) wrapper.classList.add('active');
+        }
+    </script>
+
+
+    <!-- SECTION 13: Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="assets/logo_cm.png" width="80" alt="Logo">
+                <p style="margin-top: 15px; line-height: 1.6;">অসম সাংস্কৃতিক মানচিত্ৰ প্ৰকল্প<br>Preserving the golden
+                    heritage of Assam for future generations.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li>About CMP</li>
+                    <li>Sitemap</li>
+                    <li>Terms & Conditions</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Digital Archive</h4>
+                <ul>
+                    <li>Photo Gallery</li>
+                    <li>Video Records</li>
+                    <li>Manuscripts</li>
+                    <li>Research Papers</li>
+                </ul>
+            </div>
+            <div class="footer-col" style="text-align: right;">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> culturalmapping.assam@gov.in</li>
+                    <li><i class="fas fa-phone-alt"></i> +91-361-2345678</li>
+                    <li><i class="fas fa-location-dot"></i> শ্ৰীমন্ত শংকৰদেৱ কলাক্ষেত্ৰ, পাটগাঁও, গুৱাহাটী, অসম, ভাৰত -
+                        781033</li>
+                    <li><i class="fas fa-clock"></i> সচিবালয়: সোম-শুকু, ১০ am - ৫ pm</li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Cultural Mapping Project, Assam. All Rights Reserved.</p>
+            <p>Accessibility Statement | Disclaimer | Feedback</p>
+        </div>
+    </footer>
+
+
+</body>
+
+<script src="assets/js/menu.js"></script>
+<script src="assets/js/slider.js"></script>
+
+
+<script>
+    /*=========================================
+    TOP TABS
+=========================================*/
+
+    function openTopTab(event, id) {
+
+        document.querySelectorAll(".tab-content").forEach(tab => {
+            tab.classList.remove("active");
+        });
+
+        document.querySelectorAll(".tab-btn").forEach(btn => {
+            btn.classList.remove("active");
+        });
+
+        document.getElementById(id).classList.add("active");
+        event.currentTarget.classList.add("active");
+
+        document.getElementById(id).scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }
+
+
+    /*=========================================
+        HOUSE SUB TABS
+    =========================================*/
+
+    function openSub(event, id, cls) {
+
+        const card = event.currentTarget.closest(".house-card");
+
+        card.querySelectorAll(".sub-content").forEach(function (content) {
+
+            content.classList.remove("active");
+
+        });
+
+        card.querySelectorAll(".sub-btn").forEach(function (btn) {
+
+            btn.classList.remove("active");
+
+        });
+
+        const target = document.getElementById(id);
+
+        if (target) {
+
+            target.classList.add("active");
+
+        }
+
+        event.currentTarget.classList.add("active");
+
+    }
+
+
+    /*=========================================
+            IMAGE LIGHTBOX
+    =========================================*/
+
+    const lightbox = document.createElement("div");
+    lightbox.id = "lightbox";
+
+    lightbox.innerHTML = `
+    <span class="close-lightbox">&times;</span>
+    <img id="lightbox-img">
+`;
+
+    document.body.appendChild(lightbox);
+
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    document.querySelectorAll(".gallery img").forEach(img => {
+
+        img.addEventListener("click", function () {
+
+            lightbox.classList.add("show");
+            lightboxImg.src = this.src;
+
+        });
+
+    });
+
+    lightbox.addEventListener("click", function () {
+
+        lightbox.classList.remove("show");
+
+    });
+
+
+    /*=========================================
+        SCROLL REVEAL
+    =========================================*/
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("show-card");
+
+            }
+
+        });
+
+    }, {
+        threshold: .15
+    });
+
+    document.querySelectorAll(".house-card").forEach(card => {
+
+        card.classList.add("hidden-card");
+        observer.observe(card);
+
+    });
+
+
+    /*=========================================
+        BUTTON RIPPLE EFFECT
+    =========================================*/
+
+    document.querySelectorAll(".tab-btn,.sub-btn").forEach(button => {
+
+        button.addEventListener("click", function (e) {
+
+            let ripple = document.createElement("span");
+
+            ripple.className = "ripple";
+
+            ripple.style.left = e.offsetX + "px";
+            ripple.style.top = e.offsetY + "px";
+
+            this.appendChild(ripple);
+
+            setTimeout(() => {
+
+                ripple.remove();
+
+            }, 600);
+
+        });
+
+    });
+
+
+    /*=========================================
+            BACK TO TOP
+    =========================================*/
+
+    const back = document.createElement("div");
+
+    back.className = "back-top";
+
+    back.innerHTML = '<i class="fas fa-arrow-up"></i>';
+
+    document.body.appendChild(back);
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 400) {
+
+            back.classList.add("show");
+
+        } else {
+
+            back.classList.remove("show");
+
+        }
+
+    });
+
+    back.addEventListener("click", () => {
+
+        window.scrollTo({
+
+            top: 0,
+            behavior: "smooth"
+
+        });
+
+    });
+
+
+    /*=========================================
+        ACTIVE IMAGE HOVER
+    =========================================*/
+
+    document.querySelectorAll(".gallery img").forEach(img => {
+
+        img.addEventListener("mouseenter", () => {
+
+            img.style.transform = "scale(1.05) rotate(.5deg)";
+
+        });
+
+        img.addEventListener("mouseleave", () => {
+
+            img.style.transform = "";
+
+        });
+
+    });
+
+</script>
+
+</html>
