@@ -283,7 +283,8 @@
     </section>
 
 
-    <!-- 2. ORIGINAL CATEGORIES SECTION -->
+    <!-- SECTION: Categories -->
+
     <section class="categories-section">
         <div class="category-header">
             <i class="fas fa-layer-group header-icon"></i>
@@ -292,44 +293,59 @@
         </div>
 
         <div class="category-grid">
-            <!-- Card 1: Featured -->
-            <a href="#" class="cat-card featured">
-                <h3>মৌখিক লোকবিদ্যা</h3>
-                <p>Oral Tradition</p>
+            <a href="#" class="cat-card" data-en="Project Overview" data-details="This is the detailed description for the Project Overview phase.">
+                <div class="card-illustration" style="background-image: url('assets/cat-overview.png');"></div>
+                <div class="card-divider"></div>
+                <div class="as-text">প্ৰকল্পৰ আভাস</div>
+                <div class="bottom-pattern"></div>
             </a>
 
-            <!-- Card 2: Folk Songs -->
-            <a href="#" class="cat-card maroon">
-                <i class="fas fa-drum"></i>
-                <div class="as-text">লোকগীত</div>
-                <div class="en-text">Folk Songs</div>
+            <a href="#" class="cat-card" data-en="Goal" data-details="This is the detailed description for the Goal phase.">
+                <div class="card-illustration" style="background-image: url('assets/cat-goal.png');"></div>
+                <div class="card-divider"></div>
+                <div class="as-text">লক্ষ্য</div>
+                <div class="bottom-pattern"></div>
             </a>
 
-            <!-- Card 3: Folk Tales -->
-            <a href="#" class="cat-card maroon">
-                <i class="fas fa-scroll"></i>
-                <div class="as-text">লোক কাহিনী</div>
-                <div class="en-text">Folk Tales</div>
+            <a href="#" class="cat-card" data-en="Objective" data-details="This is the detailed description for the Objective phase.">
+                <div class="card-illustration" style="background-image: url('assets/cat-objective.png');"></div>
+                <div class="card-divider"></div>
+                <div class="as-text">উদ্দেশ্য</div>
+                <div class="bottom-pattern"></div>
             </a>
 
-            <!-- Card 4: Proverbs -->
-            <a href="#" class="cat-card maroon">
-                <i class="fas fa-feather-pointed"></i>
-                <div class="as-text">প্ৰবাদ-প্রবচন</div>
-                <div class="en-text">Proverbs</div>
+            <a href="#" class="cat-card" data-en="Structural Layout" data-details="This is the detailed description for the Structural Layout phase.">
+                <div class="card-illustration" style="background-image: url('assets/cat-structural.png');"></div>
+                <div class="card-divider"></div>
+                <div class="as-text">গাঠনিক সজ্জা</div>
+                <div class="bottom-pattern"></div>
             </a>
 
-            <!-- Card 6: More -->
-            <a href="#" class="cat-card more">
-                <i class="fas fa-plus"></i>
-                <div class="as-text">অধিক জানক</div>
-                <div class="en-text">More</div>
+            <a href="#" class="cat-card" data-en="Impact" data-details="This is the detailed description for the Impact phase.">
+                <div class="card-illustration" style="background-image: url('assets/cat-impact.png');"></div>
+                <div class="card-divider"></div>
+                <div class="as-text">প্ৰভাৱ</div>
+                <div class="bottom-pattern"></div>
             </a>
         </div>
     </section>
 
+    <div id="categoryModal" class="cat-modal-overlay">
+        <div class="cat-modal-box">
+            <div class="cat-modal-header">
+                <h3 id="modalHeadingAs" class="as-text"></h3>
+                <div class="card-divider"></div>
+                <h4 id="modalHeadingEn" class="en-text"></h4>
+            </div>
+            <div class="cat-modal-body">
+                <p id="modalDetails"></p>
+            </div>
+            <div class="bottom-pattern"></div>
+        </div>
+    </div>
+
     <!-- SECTION 11: News & Events -->
-    <section class="section-padding">
+    <!-- <section class="section-padding">
         <div class="news-events-grid">
             <div>
                 <h4 style="margin-bottom: 25px;"><i class="far fa-newspaper"></i> News & Updates</h4>
@@ -360,11 +376,10 @@
                 </div>
             </div>
             <div style="text-align: center;">
-                <!-- Decorative Mandala from Image -->
                 <img src="assets/jappi.jpg" style="width: 200px; opacity: 0.8;" alt="Mandala">
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- SECTION 13: Footer -->
     <footer>
@@ -415,9 +430,85 @@
         </div>
     </footer>
 
+    <!-- Modal category -->
+    <div id="categoryModal" class="cat-modal-overlay">
+        <div class="cat-modal-box">            
+            <div class="cat-modal-header">
+                <h3 id="modalHeadingAs" class="as-text"></h3>
+                <div class="card-divider"></div>
+                <h4 id="modalHeadingEn" class="en-text"></h4>
+            </div>
+            
+            <div class="cat-modal-body">
+                <p id="modalDetails"></p>
+            </div>
+            
+            <div class="bottom-pattern"></div>
+        </div>
+    </div>
+
 </body>
 
 <script src="assets/js/menu.js"></script>
 <script src="assets/js/slider.js"></script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const cards = document.querySelectorAll('.cat-card');
+        const modal = document.getElementById('categoryModal');
+        const closeBtn = document.querySelector('.cat-modal-close');
+        
+        // Elements to populate inside the modal
+        const modalHeadingAs = document.getElementById('modalHeadingAs');
+        const modalHeadingEn = document.getElementById('modalHeadingEn');
+        const modalDetails = document.getElementById('modalDetails');
+
+        // Open modal on card click
+        cards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                e.preventDefault(); 
+                
+                // 1. Extract Assamese text from the element
+                const asTextElement = card.querySelector('.as-text');
+                const asText = asTextElement ? asTextElement.innerText : '';
+                
+                // 2. Extract English text and Details from the data attributes
+                const enText = card.getAttribute('data-en') || 'Category';
+                const specificDetails = card.getAttribute('data-details') || 'Details coming soon.';
+                
+                // 3. Populate the modal
+                modalHeadingAs.innerText = asText;
+                modalHeadingEn.innerText = enText;
+                modalDetails.innerText = specificDetails;
+
+                // 4. Show the modal
+                modal.classList.add('active');
+            });
+        });
+
+        // Close modal function
+        const closeModal = () => {
+            modal.classList.remove('active');
+        };
+
+        // Close on 'X' click
+        if(closeBtn) {
+            closeBtn.addEventListener('click', closeModal);
+        }
+
+        // Close on clicking outside the modal box
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+        
+        // Close on Escape key press
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    });
+</script>
 </html>
