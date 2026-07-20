@@ -1,15 +1,31 @@
 
-    // ===== NAVIGATION MENU FUNCTIONALITY =====
+    // ===== NAVIGATION MENU FUNCTIONALITY (Mega Menu) =====
 
 const menuToggle = document.querySelector(".menu-toggle");
 const navbarMenu = document.getElementById("navbarMenu");
 const menuClose = document.querySelector(".menu-close");
-const menuParents = document.querySelectorAll(".menu-parent");
+const siteHeader = document.querySelector("header");
 
-// Open Menu
+// Anchor the dropdown panel to sit right below the header (whatever its
+// current height happens to be) so its close button never renders behind it.
+function positionMenuBelowHeader() {
+    if (!siteHeader) return;
+    const offset = Math.max(siteHeader.getBoundingClientRect().bottom, 0);
+    navbarMenu.style.top = offset + "px";
+    navbarMenu.style.height = `calc(100% - ${offset}px)`;
+}
+
+// Open/Close Menu
 menuToggle.addEventListener("click", function (e) {
     e.preventDefault();
-    navbarMenu.classList.add("active");
+    const isOpening = !navbarMenu.classList.contains("active");
+    if (isOpening) positionMenuBelowHeader();
+    navbarMenu.classList.toggle("active");
+});
+
+// Keep the panel aligned with the header if the viewport is resized while open
+window.addEventListener("resize", function () {
+    if (navbarMenu.classList.contains("active")) positionMenuBelowHeader();
 });
 
 // Close Menu
@@ -18,40 +34,16 @@ menuClose.addEventListener("click", function (e) {
     navbarMenu.classList.remove("active");
 });
 
-// Close Menu when clicking on overlay
+// Close Menu when clicking on the dimmed backdrop (outside the menu panel)
 navbarMenu.addEventListener("click", function (e) {
     if (e.target === navbarMenu) {
         navbarMenu.classList.remove("active");
     }
 });
 
-// Toggle Submenus
-menuParents.forEach(parent => {
-    parent.addEventListener("click", function (e) {
-        e.preventDefault();
-        
-        const submenu = this.nextElementSibling;
-        const toggleIcon = this.querySelector(".toggle-icon");
-        
-        // Close all other submenus
-        menuParents.forEach(otherParent => {
-            if (otherParent !== this) {
-                otherParent.nextElementSibling.classList.remove("active");
-                otherParent.querySelector(".toggle-icon").classList.remove("active");
-            }
-        });
-
-        // Toggle current submenu
-        submenu.classList.toggle("active");
-        toggleIcon.classList.toggle("active");
-    });
-});
-
-// Close menu when clicking on a submenu item
-const submenuLinks = document.querySelectorAll(".submenu li a");
-submenuLinks.forEach(link => {
-    link.addEventListener("click", function (e) {
-        // Optional: uncomment to close entire menu when submenu item is clicked
-        // navbarMenu.classList.remove("active");
-    });
+// Close menu on Escape key press
+document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+        navbarMenu.classList.remove("active");
+    }
 });

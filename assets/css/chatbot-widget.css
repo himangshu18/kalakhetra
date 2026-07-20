@@ -1,0 +1,255 @@
+/* =====================================================
+   CMP Chatbot Widget — styles
+   Drop this file at: assets/css/chatbot-widget.css
+   ===================================================== */
+
+:root{
+    --cmp-chat-primary:#5A1737;
+    --cmp-chat-primary-dark:#3d0f26;
+    --cmp-chat-accent:#D4A017;
+    --cmp-chat-bg:#ffffff;
+    --cmp-chat-bot-bubble:#f3e9ed;
+    --cmp-chat-user-bubble:#5A1737;
+    --cmp-chat-text:#2b2b2b;
+}
+
+/* Floating launcher button */
+.cmp-chat-launcher{
+    position:fixed;
+    right:24px;
+    bottom:24px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:linear-gradient(135deg, var(--cmp-chat-primary), var(--cmp-chat-primary-dark));
+    box-shadow:0 6px 18px rgba(90,23,55,0.45);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    z-index:9998;
+    border:2px solid var(--cmp-chat-accent);
+    transition:transform .2s ease, box-shadow .2s ease;
+}
+.cmp-chat-launcher:hover{
+    transform:scale(1.07);
+    box-shadow:0 8px 22px rgba(90,23,55,0.55);
+}
+.cmp-chat-launcher i{
+    color:#fff;
+    font-size:24px;
+}
+.cmp-chat-launcher .cmp-chat-close-icon{ display:none; }
+.cmp-chat-launcher.open .cmp-chat-chat-icon{ display:none; }
+.cmp-chat-launcher.open .cmp-chat-close-icon{ display:inline-block; }
+
+/* Little pulse badge to draw attention */
+.cmp-chat-launcher::after{
+    content:"";
+    position:absolute;
+    top:2px;
+    right:2px;
+    width:12px;
+    height:12px;
+    background:#2ecc71;
+    border-radius:50%;
+    border:2px solid #fff;
+}
+
+/* Chat window panel */
+.cmp-chat-window{
+    position:fixed;
+    right:24px;
+    bottom:96px;
+    width:340px;
+    max-width:calc(100vw - 32px);
+    height:460px;
+    max-height:calc(100vh - 140px);
+    background:var(--cmp-chat-bg);
+    border-radius:14px;
+    box-shadow:0 12px 40px rgba(0,0,0,0.25);
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+    z-index:9999;
+    font-family:'Hind Siliguri','Poppins',sans-serif;
+    opacity:0;
+    transform:translateY(16px) scale(0.98);
+    pointer-events:none;
+    transition:opacity .18s ease, transform .18s ease;
+}
+.cmp-chat-window.active{
+    opacity:1;
+    transform:translateY(0) scale(1);
+    pointer-events:auto;
+}
+
+.cmp-chat-header{
+    background:linear-gradient(135deg, var(--cmp-chat-primary), var(--cmp-chat-primary-dark));
+    color:#fff;
+    padding:14px 16px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+.cmp-chat-header .cmp-chat-avatar{
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.15);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+}
+.cmp-chat-header .cmp-chat-avatar i{ font-size:18px; }
+.cmp-chat-header-text{ line-height:1.25; flex:1; }
+.cmp-chat-header-text .cmp-chat-title{ font-weight:600; font-size:14.5px; }
+.cmp-chat-header-text .cmp-chat-subtitle{ font-size:11.5px; opacity:0.85; }
+.cmp-chat-header-close{
+    cursor:pointer;
+    font-size:18px;
+    opacity:0.85;
+    padding:4px;
+}
+.cmp-chat-header-close:hover{ opacity:1; }
+
+.cmp-chat-body{
+    flex:1;
+    padding:14px;
+    overflow-y:auto;
+    background:#fbf7f8;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+.cmp-chat-body::-webkit-scrollbar{ width:6px; }
+.cmp-chat-body::-webkit-scrollbar-thumb{ background:#d9c3cb; border-radius:3px; }
+
+.cmp-chat-msg{
+    max-width:82%;
+    padding:9px 13px;
+    border-radius:14px;
+    font-size:13.5px;
+    line-height:1.5;
+    word-wrap:break-word;
+    animation:cmpChatFadeIn .18s ease;
+}
+@keyframes cmpChatFadeIn{
+    from{ opacity:0; transform:translateY(4px); }
+    to{ opacity:1; transform:translateY(0); }
+}
+.cmp-chat-msg.bot{
+    align-self:flex-start;
+    background:var(--cmp-chat-bot-bubble);
+    color:var(--cmp-chat-text);
+    border-bottom-left-radius:4px;
+}
+.cmp-chat-msg.user{
+    align-self:flex-end;
+    background:var(--cmp-chat-user-bubble);
+    color:#fff;
+    border-bottom-right-radius:4px;
+}
+
+.cmp-chat-typing{
+    align-self:flex-start;
+    background:var(--cmp-chat-bot-bubble);
+    padding:10px 14px;
+    border-radius:14px;
+    border-bottom-left-radius:4px;
+    display:flex;
+    gap:4px;
+}
+.cmp-chat-typing span{
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:#9a6b7a;
+    display:inline-block;
+    animation:cmpChatTyping 1s infinite ease-in-out;
+}
+.cmp-chat-typing span:nth-child(2){ animation-delay:.15s; }
+.cmp-chat-typing span:nth-child(3){ animation-delay:.3s; }
+@keyframes cmpChatTyping{
+    0%,60%,100%{ transform:translateY(0); opacity:0.5; }
+    30%{ transform:translateY(-4px); opacity:1; }
+}
+
+/* Quick reply chips */
+.cmp-chat-quick-replies{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    padding:0 14px 10px;
+    background:#fbf7f8;
+}
+.cmp-chat-chip{
+    border:1px solid var(--cmp-chat-primary);
+    color:var(--cmp-chat-primary);
+    background:#fff;
+    padding:6px 11px;
+    border-radius:16px;
+    font-size:12px;
+    cursor:pointer;
+    transition:background .15s ease, color .15s ease;
+    font-family:'Hind Siliguri','Poppins',sans-serif;
+}
+.cmp-chat-chip:hover{
+    background:var(--cmp-chat-primary);
+    color:#fff;
+}
+
+.cmp-chat-input-row{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:10px 12px;
+    border-top:1px solid #eee;
+    background:#fff;
+}
+.cmp-chat-input-row input{
+    flex:1;
+    border:1px solid #ddd;
+    border-radius:20px;
+    padding:9px 14px;
+    font-size:13.5px;
+    outline:none;
+    font-family:'Hind Siliguri','Poppins',sans-serif;
+}
+.cmp-chat-input-row input:focus{
+    border-color:var(--cmp-chat-primary);
+}
+.cmp-chat-send-btn{
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    background:var(--cmp-chat-primary);
+    color:#fff;
+    border:none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    flex-shrink:0;
+    transition:background .15s ease;
+}
+.cmp-chat-send-btn:hover{ background:var(--cmp-chat-primary-dark); }
+
+.cmp-chat-footer-note{
+    font-size:10px;
+    text-align:center;
+    color:#999;
+    padding:4px 0 8px;
+    background:#fff;
+}
+
+@media (max-width:480px){
+    .cmp-chat-window{
+        right:12px;
+        left:12px;
+        width:auto;
+        bottom:88px;
+    }
+    .cmp-chat-launcher{ right:16px; bottom:16px; }
+}

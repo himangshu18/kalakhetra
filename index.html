@@ -9,6 +9,8 @@
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/homepage-styles.css">
+    <!-- Chatbot widget styles -->
+    <link rel="stylesheet" href="assets/css/chatbot-widget.css">
 
     <!-- Google Fonts: Poppins & Hind Siliguri for Assamese -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -52,57 +54,52 @@
             <div class="ic-badge">IC</div>
         </div>
     </header>
-    <!-- SECTION 3: Collapsible Navigation Menu -->
+    <!-- SECTION 3: Mega Menu Navigation -->
     <nav class="navbar-menu" id="navbarMenu">
         <div class="navbar-menu-inner">
-        
-            <div class="menu-close"><i class="fas fa-times"></i></div>
+            <div class="mega-menu-topbar">
+                <h2 class="mega-menu-title">Menu</h2>
+                <div class="menu-close"><i class="fas fa-times"></i></div>
+            </div>
 
-         
-            <ul class="menu-list">
-            
-                <li class="menu-item">
-                    <a href="#" class="menu-link menu-parent">
-                        <span>সবিশেষ</span>
-                        <i class="fas fa-chevron-down toggle-icon"></i>
-                    </a>
-                    <ul class="submenu">
-                        <li><a href="#">প্ৰকল্পৰ আভাস</a></li>
-                        <li><a href="#">লক্ষ্য</a></li>
-                        <li><a href="#">উদ্দেশ্য</a></li>
+            <div class="mega-menu-grid">
+
+                <div class="mega-menu-col">
+                    <div class="mega-menu-col-header">সবিশেষ</div>
+                    <ul class="mega-menu-list">
+                        <li><a href="category-details.html?cat=overview">প্ৰকল্পৰ আভাস</a></li>
+                        <li><a href="category-details.html?cat=goal">লক্ষ্য</a></li>
+                        <li><a href="category-details.html?cat=objective">উদ্দেশ্য</a></li>
                         <li><a href="team_members.html">গাঠনিক সজ্জা</a></li>
-                        <li><a href="#">প্ৰভাৱ</a></li>
+                        <li><a href="category-details.html?cat=impact">প্ৰভাৱ</a></li>
                     </ul>
-                </li>
+                </div>
 
-        
-                <li class="menu-item">
-                    <a href="#" class="menu-link">
-                        <span>ৰাজ্য পৰিচয়</span>
-                    </a>
-                </li>
+                <div class="mega-menu-col">
+                    <div class="mega-menu-col-header">ৰাজ্য পৰিচয়</div>
+                    <ul class="mega-menu-list">
+                        <li><a href="#">ৰাজ্য পৰিচয়</a></li>
+                    </ul>
+                </div>
 
-               
-                <li class="menu-item">
-                    <a href="#" class="menu-link menu-parent">
-                        <span>সমল</span>
-                        <i class="fas fa-chevron-down toggle-icon"></i>
-                    </a>
-                    <ul class="submenu">
+                <div class="mega-menu-col">
+                    <div class="mega-menu-col-header">সমল</div>
+                    <ul class="mega-menu-list">
                         <li><a href="#">সম্পদ ১</a></li>
                         <li><a href="#">সম্পদ ২</a></li>
                         <li><a href="#">সম্পদ ৩</a></li>
                         <li><a href="#">সম্পদ ৪</a></li>
                     </ul>
-                </li>
+                </div>
 
-              
-                <li class="menu-item">
-                    <a href="#" class="menu-link">
-                        <span>কৰ্মক্লাপ</span>
-                    </a>
-                </li>
-            </ul>
+                <div class="mega-menu-col">
+                    <div class="mega-menu-col-header">কৰ্মক্লাপ</div>
+                    <ul class="mega-menu-list">
+                        <li><a href="#">কৰ্মক্লাপ</a></li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
     </nav>
 
@@ -221,69 +218,6 @@
         <div class="right-side-img"></div>
     </div>
 
-    <!-- <section class="cmp-unified-about">
-
-       
-        <div class="side-img left-side-img"></div>
-
-        
-        <div class="content-wrap">
-
-          
-            <div class="about-text-col">
-                <div class="cmp-title-row">
-                    <span>❖</span>
-                    <h3>About Project</h3>
-                    <span>❖</span>
-                </div>
-                <p>
-                    সাংস্কৃতিক মানচিত্ৰণ প্ৰকল্প' (CMP) হৈছে অসমৰ বৈচিত্ৰময় সাংস্কৃতিক ঐতিহ্যৰ নথিভুক্তকৰণ, সংৰক্ষণ আৰু
-                    প্ৰচাৰৰ বিস্তৃত পদক্ষেপ। এই প্ৰকল্পৰ জৰিয়তে ৰাজ্যৰ বিভিন্ন জনগোষ্ঠীৰ লোকসংস্কৃতি, পৰম্পৰা, শিল্প
-                    আৰু সামাজিক ৰীতি-নীতি সম্পৰ্কীয় তথ্য সংগ্ৰহ কৰি এক বিস্তৃত ডিজিটেল তথ্যভঁৰাল গঢ়ি তোলা হৈছে।
-                </p>
-                <a href="#" class="btn-read-more">
-                    Know More <i class="fas fa-arrow-circle-right"></i>
-                </a>
-            </div>
-
-           
-            <div class="about-grid-col">
-                <div class="cmp-title-row">
-                    <span>❖</span>
-                    <h3>Explore Assam Heritage</h3>
-                    <span>❖</span>
-                </div>
-
-                <div class="heritage-grid">
-                    <div class="heritage-item">
-                        <i class="fas fa-drum"></i>
-                        <h4>Oral Traditions</h4>
-                        <p>Folk songs & legends</p>
-                    </div>
-                    <div class="heritage-item">
-                        <i class="fas fa-users"></i>
-                        <h4>Community Life</h4>
-                        <p>Customs & beliefs</p>
-                    </div>
-                    <div class="heritage-item">
-                        <i class="fas fa-feather"></i>
-                        <h4>Art & Crafts</h4>
-                        <p>Traditional weaving</p>
-                    </div>
-                    <div class="heritage-item">
-                        <i class="fas fa-landmark"></i>
-                        <h4>Heritage Sites</h4>
-                        <p>Sacred monuments</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
-    </section> -->
-
-
     <!-- SECTION: Categories -->
 
     <section class="categories-section">
@@ -294,35 +228,35 @@
         </div>
 
         <div class="category-grid">
-            <a href="#" class="cat-card" data-en="Project Overview" data-details="This is the detailed description for the Project Overview phase.">
+            <a href="#" class="cat-card" data-cat="overview" data-en="Project Overview" data-details="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.">
                 <div class="card-illustration" style="background-image: url('assets/cat-overview.png');"></div>
                 <div class="card-divider"></div>
                 <div class="as-text">প্ৰকল্পৰ আভাস</div>
                 <div class="bottom-pattern"></div>
             </a>
 
-            <a href="#" class="cat-card" data-en="Goal" data-details="This is the detailed description for the Goal phase.">
+            <a href="#" class="cat-card" data-cat="goal" data-en="Goal" data-details="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.">
                 <div class="card-illustration" style="background-image: url('assets/cat-goal.png');"></div>
                 <div class="card-divider"></div>
                 <div class="as-text">লক্ষ্য</div>
                 <div class="bottom-pattern"></div>
             </a>
 
-            <a href="#" class="cat-card" data-en="Objective" data-details="This is the detailed description for the Objective phase.">
+            <a href="#" class="cat-card" data-cat="objective" data-en="Objective" data-details="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.">
                 <div class="card-illustration" style="background-image: url('assets/cat-objective.png');"></div>
                 <div class="card-divider"></div>
                 <div class="as-text">উদ্দেশ্য</div>
                 <div class="bottom-pattern"></div>
             </a>
 
-            <a href="#" class="cat-card" data-en="Structural Layout" data-details="This is the detailed description for the Structural Layout phase.">
+            <a href="#" class="cat-card" data-cat="structural" data-en="Structural Layout" data-details="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.">
                 <div class="card-illustration" style="background-image: url('assets/cat-structural.png');"></div>
                 <div class="card-divider"></div>
                 <div class="as-text">গাঠনিক সজ্জা</div>
                 <div class="bottom-pattern"></div>
             </a>
 
-            <a href="#" class="cat-card" data-en="Impact" data-details="This is the detailed description for the Impact phase.">
+            <a href="#" class="cat-card" data-cat="impact" data-en="Impact" data-details="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.">
                 <div class="card-illustration" style="background-image: url('assets/cat-impact.png');"></div>
                 <div class="card-divider"></div>
                 <div class="as-text">প্ৰভাৱ</div>
@@ -342,47 +276,14 @@
             </div>
             <div class="cat-modal-body">
                 <p id="modalDetails"></p>
+                <a href="category-details.html" id="modalReadMore" class="btn-read-more">
+                    Read More <i class="fas fa-arrow-circle-right"></i>
+                </a>
             </div>
             <div class="bottom-pattern"></div>
         </div>
     </div>
 
-    <!-- SECTION 11: News & Events -->
-    <!-- <section class="section-padding">
-        <div class="news-events-grid">
-            <div>
-                <h4 style="margin-bottom: 25px;"><i class="far fa-newspaper"></i> News & Updates</h4>
-                <div class="news-card">
-                    <img src="https://placehold.co/100x80/5A1737/white?text=Bihu" alt="News">
-                    <div>
-                        <h5>Rongali Bihu Celebration</h5><small>12 Apr 2025</small>
-                    </div>
-                </div>
-                <div class="news-card">
-                    <img src="https://placehold.co/100x80/5A1737/white?text=Music" alt="News">
-                    <div>
-                        <h5>Folk Music Workshop</h5><small>21 Mar 2025</small>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <h4 style="margin-bottom: 25px;"><i class="far fa-calendar-alt"></i> Upcoming Events</h4>
-                <div class="event-item">
-                    <p class="event-date">14 MAY</p>
-                    <h5>Community Heritage Meet</h5>
-                    <small>Majuli, Assam</small>
-                </div>
-                <div class="event-item">
-                    <p class="event-date">22 JUN</p>
-                    <h5>Boro Traditional Dance Fest</h5>
-                    <small>Kokrajhar</small>
-                </div>
-            </div>
-            <div style="text-align: center;">
-                <img src="assets/jappi.jpg" style="width: 200px; opacity: 0.8;" alt="Mandala">
-            </div>
-        </div>
-    </section> -->
     <!-- =====================================
      ABOUT PROJECT MODAL
 ====================================== -->
@@ -515,29 +416,14 @@
         </div>
     </footer>
 
-    <!-- Modal category -->
-    <div id="categoryModal" class="cat-modal-overlay">
-        <div class="cat-modal-box">            
-            <div class="cat-modal-header">
-                <h3 id="modalHeadingAs" class="as-text"></h3>
-                <div class="card-divider"></div>
-                <h4 id="modalHeadingEn" class="en-text"></h4>
-            </div>
-            
-            <div class="cat-modal-body">
-                <p id="modalDetails"></p>
-            </div>
-            
-            <div class="bottom-pattern"></div>
-        </div>
-    </div>
-
 </body>
 
 <!-- JS -->
 <script src="assets/js/menu.js"></script>
 <script src="assets/js/slider.js"></script>
 <script src="assets/js/modal.js"></script>
+<!-- Chatbot widget (dummy Q&A, no backend) -->
+<script src="assets/js/chatbot-widget.js"></script>
 
 
 <script>

@@ -1,0 +1,70 @@
+/* =====================================
+   CATEGORY DETAILS PAGE
+===================================== */
+
+.cd-wrapper {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 5%;
+}
+
+/* --- Content Area --- */
+.cd-content {
+    background: #fff;
+    border: 1px solid var(--border-tan);
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.cd-section {
+    display: none;
+}
+
+.cd-section.active {
+    display: block;
+    animation: cdFadeIn 0.35s ease;
+}
+
+@keyframes cdFadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.cd-heading {
+    margin-bottom: 22px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--border-tan);
+}
+
+.cd-heading .as-text {
+    color: var(--maroon);
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.cd-heading .en-text {
+    color: var(--text-gray);
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 4px;
+}
+
+.cd-body p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin-bottom: 18px;
+}
+
+.cd-body p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .cd-content {
+        padding: 25px;
+    }
+}

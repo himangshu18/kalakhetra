@@ -55,216 +55,194 @@
             <div class="ic-badge">IC</div>
         </div>
     </header>
-    <!-- SECTION 3: Collapsible Navigation Menu -->
+    <!-- SECTION 3: Mega Menu Navigation -->
     <nav class="navbar-menu" id="navbarMenu">
         <div class="navbar-menu-inner">
-            <!-- Close Button -->
-            <div class="menu-close"><i class="fas fa-times"></i></div>
+            <div class="mega-menu-topbar">
+                <h2 class="mega-menu-title">Menu</h2>
+                <div class="menu-close"><i class="fas fa-times"></i></div>
+            </div>
 
-            <!-- Menu Items -->
-            <ul class="menu-list">
-            
-                <li class="menu-item">
-                    <a href="#" class="menu-link menu-parent">
-                        <span>সবিশেষ</span>
-                        <i class="fas fa-chevron-down toggle-icon"></i>
-                    </a>
-                    <ul class="submenu">
-                        <li><a href="#">প্ৰকল্পৰ আভাস</a></li>
-                        <li><a href="#">লক্ষ্য</a></li>
-                        <li><a href="#">উদ্দেশ্য</a></li>
+            <div class="mega-menu-grid">
+
+                <div class="mega-menu-col">
+                    <div class="mega-menu-col-header">সবিশেষ</div>
+                    <ul class="mega-menu-list">
+                        <li><a href="category-details.html?cat=overview">প্ৰকল্পৰ আভাস</a></li>
+                        <li><a href="category-details.html?cat=goal">লক্ষ্য</a></li>
+                        <li><a href="category-details.html?cat=objective">উদ্দেশ্য</a></li>
                         <li><a href="team_members.html">গাঠনিক সজ্জা</a></li>
-                        <li><a href="#">প্ৰভাৱ</a></li>
+                        <li><a href="category-details.html?cat=impact">প্ৰভাৱ</a></li>
                     </ul>
-                </li>
+                </div>
 
-        
-                <li class="menu-item">
-                    <a href="#" class="menu-link">
-                        <span>ৰাজ্য পৰিচয়</span>
-                    </a>
-                </li>
+                <div class="mega-menu-col">
+                    <div class="mega-menu-col-header">ৰাজ্য পৰিচয়</div>
+                    <ul class="mega-menu-list">
+                        <li><a href="#">ৰাজ্য পৰিচয়</a></li>
+                    </ul>
+                </div>
 
-               
-                <li class="menu-item">
-                    <a href="#" class="menu-link menu-parent">
-                        <span>সমল</span>
-                        <i class="fas fa-chevron-down toggle-icon"></i>
-                    </a>
-                    <ul class="submenu">
+                <div class="mega-menu-col">
+                    <div class="mega-menu-col-header">সমল</div>
+                    <ul class="mega-menu-list">
                         <li><a href="#">সম্পদ ১</a></li>
                         <li><a href="#">সম্পদ ২</a></li>
                         <li><a href="#">সম্পদ ৩</a></li>
                         <li><a href="#">সম্পদ ৪</a></li>
                     </ul>
-                </li>
+                </div>
 
-              
-                <li class="menu-item">
-                    <a href="#" class="menu-link">
-                        <span>কৰ্মক্লাপ</span>
-                    </a>
-                </li>
-            </ul>
+                <div class="mega-menu-col">
+                    <div class="mega-menu-col-header">কৰ্মক্লাপ</div>
+                    <ul class="mega-menu-list">
+                        <li><a href="#">কৰ্মক্লাপ</a></li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
     </nav>
 
-    
-
-
-
-
-
-
-<div class="team-container">
+    <div class="team-container">
 
     <section class="team-section">
 
         <div class="section-title">
-
             <span class="section-badge">
                 <i class="fas fa-users"></i> OUR TEAM
             </span>
-
             <h2>Meet Our Team</h2>
-
             <p>
                 Dedicated professionals working together to preserve and promote
                 the rich cultural heritage of Assam through the Cultural Mapping Project.
             </p>
-
         </div>
 
         <!-- PROJECT DIRECTOR -->
-
         <div class="director-section">
-
             <div class="director-card">
-
-                <div class="team-image">
-                    <img src="assets/dummy-user.png">
+                <div class="director-image">
+                    <img src="assets/dummy-user.png" alt="Dr. Anirban Sharma">
                 </div>
-
-                <div class="team-info">
-
+                <div class="director-info">
+                    <span class="director-badge"><i class="fas fa-star"></i> Project Director</span>
                     <h3>Dr. Anirban Sharma</h3>
-
-                    <span>Project Director</span>
-
+                    <p>
+                        Leading the Cultural Mapping Project with a vision to document, safeguard and
+                        showcase the rich, diverse cultural heritage of Assam for generations to come.
+                    </p>
+                    <div class="team-socials">
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
-
             </div>
-
         </div>
 
-        <h2 class="team-heading">
-
-            Core Team
-
-        </h2>
+        <div class="team-divider">
+            <span class="team-divider-line"></span>
+            <h2 class="team-heading">Core Team</h2>
+            <span class="team-divider-line"></span>
+        </div>
 
         <div class="team-grid">
 
-            <!-- Member Card -->
+            <!-- Member 1 -->
+            <div class="team-card">
+                <div class="team-image">
+                    <img src="assets/dummy-user.png" alt="Prof. Ranjana Das">
+                </div>
+                <div class="team-info">
+                    <h3>Prof. Ranjana Das</h3>
+                    <span>Project Coordinator</span>
+                    <div class="team-socials">
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
 
-            
+            <!-- Member 2 -->
+            <div class="team-card">
+                <div class="team-image">
+                    <img src="assets/dummy-user.png" alt="Mr. Arup Gogoi">
+                </div>
+                <div class="team-info">
+                    <h3>Mr. Arup Gogoi</h3>
+                    <span>Technical Lead</span>
+                    <div class="team-socials">
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
 
-            <div class="team-grid">
+            <!-- Member 3 -->
+            <div class="team-card">
+                <div class="team-image">
+                    <img src="assets/dummy-user.png" alt="Ms. Nabanita Kalita">
+                </div>
+                <div class="team-info">
+                    <h3>Ms. Nabanita Kalita</h3>
+                    <span>Research Officer</span>
+                    <div class="team-socials">
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
 
-        <!-- Member 1 -->
-        <div class="team-card">
-            <div class="team-image">
-                <img src="assets/dummy-user.png" alt="Member 1">
+            <!-- Member 4 -->
+            <div class="team-card">
+                <div class="team-image">
+                    <img src="assets/dummy-user.png" alt="Mr. Rupam Deka">
+                </div>
+                <div class="team-info">
+                    <h3>Mr. Rupam Deka</h3>
+                    <span>Documentation Specialist</span>
+                    <div class="team-socials">
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="team-info">
-                <h3>Dr. Anirban Sharma</h3>
-                <span>Project Director</span>
-            </div>
-        </div>
 
-        <!-- Member 2 -->
-        <div class="team-card">
-            <div class="team-image">
-                <img src="assets/dummy-user.png" alt="Member 2">
+            <!-- Member 5 -->
+            <div class="team-card">
+                <div class="team-image">
+                    <img src="assets/dummy-user.png" alt="Ms. Priyanka Bora">
+                </div>
+                <div class="team-info">
+                    <h3>Ms. Priyanka Bora</h3>
+                    <span>Cultural Research Associate</span>
+                    <div class="team-socials">
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="team-info">
-                <h3>Prof. Ranjana Das</h3>
-                <span>Project Coordinator</span>
-            </div>
-        </div>
 
-        <!-- Member 3 -->
-        <div class="team-card">
-            <div class="team-image">
-                <img src="assets/dummy-user.png" alt="Member 3">
+            <!-- Member 6 -->
+            <div class="team-card">
+                <div class="team-image">
+                    <img src="assets/dummy-user.png" alt="Mr. Saurav Bhuyan">
+                </div>
+                <div class="team-info">
+                    <h3>Mr. Saurav Bhuyan</h3>
+                    <span>IT Support Engineer</span>
+                    <div class="team-socials">
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="team-info">
-                <h3>Mr. Arup Gogoi</h3>
-                <span>Technical Lead</span>
-            </div>
-        </div>
-
-        <!-- Member 4 -->
-        <div class="team-card">
-            <div class="team-image">
-                <img src="assets/dummy-user.png" alt="Member 4">
-            </div>
-            <div class="team-info">
-                <h3>Ms. Nabanita Kalita</h3>
-                <span>Research Officer</span>
-            </div>
-        </div>
-
-        <!-- Member 5 -->
-        <div class="team-card">
-            <div class="team-image">
-                <img src="assets/dummy-user.png" alt="Member 5">
-            </div>
-            <div class="team-info">
-                <h3>Mr. Rupam Deka</h3>
-                <span>Documentation Specialist</span>
-            </div>
-        </div>
-
-        <!-- Member 6 -->
-        <div class="team-card">
-            <div class="team-image">
-                <img src="assets/dummy-user.png" alt="Member 6">
-            </div>
-            <div class="team-info">
-                <h3>Ms. Priyanka Bora</h3>
-                <span>Cultural Research Associate</span>
-            </div>
-        </div>
-
-        <!-- Member 7 -->
-        <div class="team-card">
-            <div class="team-image">
-                <img src="assets/dummy-user.png" alt="Member 7">
-            </div>
-            <div class="team-info">
-                <h3>Mr. Saurav Bhuyan</h3>
-                <span>IT Support Engineer</span>
-            </div>
-        </div>
-
-    </div>
 
         </div>
 
     </section>
 
 </div>
-
-
-    <script>
-        function toggleDrawer(card) {
-            const wrapper = card.parentElement;
-            const isActive = wrapper.classList.contains('active');
-            document.querySelectorAll('.as-cat-wrapper').forEach(item => item.classList.remove('active'));
-            if (!isActive) wrapper.classList.add('active');
-        }
-    </script>
 
 
     <!-- SECTION 13: Footer -->
