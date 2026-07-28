@@ -3,17 +3,38 @@
 ===================================== */
 
 .cd-wrapper {
-    max-width: 1000px;
+    display: flex;
+    align-items: flex-start;
+    max-width: 1300px;
     margin: 40px auto;
     padding: 0 5%;
+    gap: 30px;
 }
 
 /* --- Content Area --- */
 .cd-content {
+    position: relative;
+    flex: 1;
+    min-width: 0;
     background: #fff;
     border: 1px solid var(--border-tan);
     border-radius: 10px;
-    padding: 40px;
+    padding: 40px 40px 60px;
+    overflow: hidden;
+}
+
+/* Same decorative bottom border used on the "Original Categories" cards
+   and their modal on the home page, so this page matches that design. */
+.cd-content .bottom-pattern {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    background-image: url('../category-bottom-bar-1.png');
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    background-position: center bottom;
 }
 
 .cd-section {
@@ -62,8 +83,87 @@
     margin-bottom: 0;
 }
 
+/* --- Side Visual (photo mosaic) --- */
+.cd-side-visual {
+    flex: 0 0 260px;
+    position: sticky;
+    top: 100px; /* clears the now-sticky site header so it doesn't render underneath it */
+    background: #fff;
+    border: 1px solid var(--border-tan);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.cd-visual-heading {
+    text-align: center;
+    color: var(--maroon);
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.cd-visual-heading span {
+    color: var(--gold-accent);
+    font-size: 12px;
+}
+
+.cd-visual-grid {
+    columns: 2;
+    column-gap: 10px;
+}
+
+.cd-visual-tile {
+    break-inside: avoid;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-tan);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.cd-visual-tile img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.cd-visual-tile:hover img {
+    transform: scale(1.08);
+}
+
+/* Vary tile heights a little so the mosaic doesn't look like a flat table */
+.cd-visual-tile:nth-child(1) img,
+.cd-visual-tile:nth-child(4) img,
+.cd-visual-tile:nth-child(7) img {
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+}
+
+.cd-visual-tile:nth-child(2) img,
+.cd-visual-tile:nth-child(3) img,
+.cd-visual-tile:nth-child(5) img,
+.cd-visual-tile:nth-child(6) img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
 /* --- Responsive --- */
 @media (max-width: 900px) {
+    .cd-wrapper {
+        flex-direction: column;
+    }
+
+    .cd-side-visual {
+        position: relative;
+        top: 0;
+        width: 100%;
+    }
+
     .cd-content {
         padding: 25px;
     }
